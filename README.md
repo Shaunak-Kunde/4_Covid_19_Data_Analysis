@@ -1,9 +1,9 @@
-🦠 COVID-19 Data Analysis with Python
+## 🦠 COVID-19 Data Analysis with Python
 
 This project performs an Exploratory Data Analysis (EDA) on the COVID-19 pandemic using Python.
 It explores how the virus spread across countries and examines possible correlations between infection rates and global happiness factors (GDP, health, and social support).
 
-📘 Overview
+# 📘 Overview
 
 The notebook walks through the process of:
 
@@ -17,27 +17,24 @@ Analyzing the relationships between infection rates and socioeconomic indicators
 
 Visualizing trends and insights using Matplotlib and Seaborn.
 
-📂 Files
+# 📂 Files
 File	Description
 covid19 data analysis notebook.ipynb	Main Jupyter Notebook containing the full workflow, analysis, and plots.
 covid19_Confirmed_dataset.csv	COVID-19 global confirmed cases dataset (source: Johns Hopkins University).
 2019.csv	World Happiness Report 2019 dataset (source: Kaggle / World Happiness Report).
-🧰 Libraries Used
+# 🧰 Libraries Used
 
 pandas → data loading, cleaning, and manipulation
-
 numpy → numerical computations
-
 matplotlib.pyplot → data visualization
-
 seaborn → statistical visualizations and regression plots
 
 Install them (if not already):
 
 pip install pandas numpy matplotlib seaborn
 
-🧩 Project Workflow
-Task 1: Module Import
+# 🧩 Project Workflow
+# Task 1: Module Import
 
 Basic Python data libraries are imported for analysis and visualization.
 
@@ -46,7 +43,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-Task 2: COVID-19 Data Preparation
+# Task 2: COVID-19 Data Preparation
 🗂️ 2.1 Import Dataset
 
 Read covid19_Confirmed_dataset.csv, containing country-wise cumulative cases from January to April 2020.
@@ -68,7 +65,7 @@ corona_dataset_aggregated.T["China"].plot(label='China')
 corona_dataset_aggregated.T["Italy"].plot(label='Italy')
 corona_dataset_aggregated.T["India"].plot(label='India')
 
-Task 3: Infection Rate Analysis
+# Task 3: Infection Rate Analysis
 ⚙️ 3.1 Derivative Calculation
 
 Computed daily change (first derivative) of confirmed cases per country.
@@ -81,7 +78,7 @@ Calculated each country’s maximum daily increase in cases — the max_infectio
 
 Created a new DataFrame with only the max_infection_rate for each country.
 
-Task 4: Integrating Happiness Report
+# Task 4: Integrating Happiness Report
 🌍 4.1 Load World Happiness Report (2019)
 
 Read the dataset 2019.csv and dropped unused columns like Overall rank, Score, Generosity, etc.
@@ -103,7 +100,8 @@ GDP per capita	0.25
 Social support	0.19
 Healthy life expectancy	0.29
 Freedom to make life choices	0.07
-Task 5: Visualization of Results
+
+# Task 5: Visualization of Results
 💰 GDP per capita vs Infection Rate
 
 Examined whether richer countries faced higher infection spikes.
@@ -120,7 +118,7 @@ Analyzed how healthcare quality affected infection rates.
 
 Observed weaker correlation trends for this factor.
 
-Example plot:
+# Example plot:
 
 x = data["Healthy life expectancy"]
 y = data["max_infection_rate"]
@@ -137,13 +135,14 @@ Social support and freedom metrics had weaker relationships with infection sprea
 
 India, Italy, and China displayed distinct infection curves, reflecting different pandemic response timelines.
 
-📈 Results Summary
+# 📈 Results Summary
 Metric	Insight
 Highest infection rate	Spain & Italy (April 2020)
 Lowest infection rate	African and island nations
 Strongest correlation	GDP per capita ↔ Life expectancy
 Weakest correlation	Freedom of choice ↔ Infection rate
-🧠 Learnings
+
+# 🧠 Learnings
 
 Hands-on experience with real-world time-series data cleaning and aggregation.
 
@@ -153,7 +152,7 @@ Visual storytelling with Matplotlib and Seaborn regression plots.
 
 Understanding of how data correlations don’t always imply causation.
 
-📚 References
+# 📚 References
 
 Johns Hopkins University COVID-19 Data Repository
 
